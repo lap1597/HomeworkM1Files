@@ -1,0 +1,178 @@
+------------------------------Testing toString------------------------------
+-----Make sure that the digital receipts show the email address.
+Receipt a1x1m1m1	Store: Foods R Us (Smallerville)	10 items 	Total:$99.47
+Receipt vbevb0vv	Store: Foods R Us (Smallerville)	1 item  	Total:$0.99
+Receipt h2g2b2gb	Store: Foods R Us (Union City)	21 items 	Total:$219.42
+Receipt avvz0avv	Store: ElectroFun (Union City)	1 item  		Total:$599.99
+Receipt bxxbxx3x	Store: The Bookworm (Eastchester)	50 items 	Total:$525.25	Digital copy sent to: sir.reads.a.lot@books.com
+Receipt uuu3fqqq	Store: The Bookworm (Eastchester)	1 item  	Total:$4.87	Digital copy sent to: mark.darcy@gmail.abc
+Receipt xxx2m2xx	Store: ElectroFun (Union City)	2 items 	Total:$139.21	Digital copy sent to: dr.frankenstein@monster.com
+Receipt ybbby99y	Store: Foods R Us (Smallerville)	18 items 	Total:$78.41	Digital copy sent to: t@iced.com
+
+
+------------------------------Testing use of Store object as an instance data variable.------------------------------
+Store A: Foods R Us (Union City)
+Store B: Foods R Us (Union City)
+Equal? Expected=true
+Equal?   Actual=true
+
+
+------------------------------Testing equals method------------------------------
+
+Invoking object:  Receipt a1x1m1m1	Store: Foods R Us (Smallerville)	10 items 	Total:$99.47
+Parameter object: Receipt a1x1m1m1	Store: Foods R Us (Smallerville)	10 items 	Total:$99.47
+Expected result=true
+  Actual result=true
+
+Invoking object:  Receipt vbevb0vv	Store: Foods R Us (Smallerville)	1 item  	Total:$0.99
+Parameter object: Receipt vbevb0vv	Store: Foods R Us (Smallerville)	1 item  	Total:$0.99
+Expected result=true
+  Actual result=true
+
+Invoking object:  Receipt h2g2b2gb	Store: Foods R Us (Union City)	21 items 	Total:$219.42
+Parameter object: Receipt h2g2b2gb	Store: FOODS R US (union city)	21 items 	Total:$219.42
+Expected result=true
+  Actual result=true
+
+Invoking object:  Receipt avvz0avv	Store: ElectroFun (Union City)	1 item  	Total:$599.99
+Parameter object: Receipt AVVZ0AVV	Store: ElectroFun (Union City)	1 item  	Total:$599.99
+Expected result=true
+  Actual result=true
+
+Invoking object:  Receipt a1x1m1m1	Store: Foods R Us (Smallerville)	10 items 	Total:$99.47
+Parameter object: Receipt a1x1m1m1	Store: FOODS R US (union city)	10 items 	Total:$99.47
+Expected result=false
+  Actual result=false
+
+Invoking object:  Receipt vbevb0vv	Store: Foods R Us (Smallerville)	1 item  	Total:$0.99
+Parameter object: Receipt vbevb0vv	Store: Foods R Us (Smallerville)	2 items 	Total:$0.99
+Expected result=false
+  Actual result=false
+
+Invoking object:  Receipt h2g2b2gb	Store: Foods R Us (Union City)	21 items 	Total:$219.42
+Parameter object: Receipt h2g2b2gb	Store: Foods R Us (Union City)	21 items 	Total:$438.84
+Expected result=false
+  Actual result=false
+
+Invoking object:  Receipt avvz0avv	Store: ElectroFun (Union City)	1 item  	Total:$599.99
+Parameter object: Receipt vvz0avv	Store: ElectroFun (Union City)	1 item  	Total:$599.99
+Expected result=false
+  Actual result=false
+
+Testing equality using the contains method...
+All contains tests passed.
+
+
+------------------------------Testing Receipt Criteria------------------------------
+
+ID=ooXoMoMo  firstTarget=X  secondTarget=M  timesAfter=2
+Expected=true
+  Actual=true
+
+ID=VoEVooVV  firstTarget=E  secondTarget=V  timesAfter=3
+Expected=true
+  Actual=true
+
+ID=00g0p0gp  firstTarget=g  secondTarget=p  timesAfter=2
+Expected=true
+  Actual=true
+
+ID=y1q111q1  firstTarget=q  secondTarget=y  timesAfter=0
+Expected=true
+  Actual=true
+
+ID=a11a1111  firstTarget=a  secondTarget=z  timesAfter=0
+Expected=true
+  Actual=true
+
+ID=ooFoDDoo  firstTarget=F  secondTarget=D  timesAfter=3
+Expected=false
+  Actual=false
+
+ID=AooZoAoo  firstTarget=Z  secondTarget=A  timesAfter=2
+Expected=false
+  Actual=false
+
+ID=1111pqqq  firstTarget=p  secondTarget=q  timesAfter=2
+Expected=false
+  Actual=false
+
+ID=1111m111  firstTarget=c  secondTarget=m  timesAfter=1
+Expected=false
+  Actual=false
+
+ID=obbboooo  firstTarget=b  secondTarget=b  timesAfter=3
+Expected=false
+  Actual=false
+
+
+------------------------------Testing e-Mail Validator (Extra Credit)------------------------------
+-----Un-comment the driver file to test the extra credit.
+
+email=sir.reads.a.lot@books.com
+Expected=true
+  Actual=true
+
+email=mark.darcy@gmail.abc
+Expected=true
+  Actual=true
+
+email=dr.frankenstein@monster.com
+Expected=true
+  Actual=true
+
+email=t@iced.gov
+Expected=true
+  Actual=true
+
+email=ina@hurry.edu
+Expected=true
+  Actual=true
+
+email=morris?@better.org
+Expected=true
+  Actual=true
+
+email=@abc.xyz
+Expected=false
+  Actual=false
+
+email=abc.com
+Expected=false
+  Actual=false
+
+email=j@com
+Expected=false
+  Actual=false
+
+email=jessica@com
+Expected=false
+  Actual=false
+
+email=jessica.masters@com
+Expected=false
+  Actual=false
+
+email=j.m@gmail.comm
+Expected=false
+  Actual=false
+
+email=j.m@gmail.hi
+Expected=false
+  Actual=false
+
+email=j.m@gmail.z
+Expected=false
+  Actual=false
+
+email=abcdef
+Expected=false
+  Actual=false
+
+email=!@abc.def
+Expected=false
+  Actual=false
+
+
+-----------------------------TESTING COMPLETE-----------------------------
+----------Summary---------- All automated tests have passed. Be sure to manually review your code for style.
