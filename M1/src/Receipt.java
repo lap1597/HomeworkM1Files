@@ -4,7 +4,7 @@ public class Receipt {
     private double total;
     private String receiptID;
     public static final int DEFAULT_ITEM=1;
-    
+    //fix this
     public Receipt(){
        
     }
