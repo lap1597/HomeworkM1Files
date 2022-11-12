@@ -5,6 +5,7 @@ public class Receipt {
     private String receiptID;
     public static final int DEFAULT_ITEM=1;
     //fix this
+	//hellpo
     public Receipt(){
        
     }
